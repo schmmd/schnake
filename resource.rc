@@ -1,0 +1,242 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FOOD                BITMAP  DISCARDABLE     "food.bmp"
+IDB_GAMEOVER            BITMAP  DISCARDABLE     "gameover.bmp"
+IDB_PAUSED              BITMAP  DISCARDABLE     "paused.bmp"
+IDB_WALL                BITMAP  DISCARDABLE     "wall.bmp"
+IDB_TITLE               BITMAP  DISCARDABLE     "title.bmp"
+IDB_AUTHOR              BITMAP  DISCARDABLE     "author.bmp"
+IDB_TAIL                BITMAP  DISCARDABLE     "tail.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New Game\tCtrl+N",           MNU_FILE_NEWGAME
+        MENUITEM "&Pause Game\tCtrl+P",         MNU_FILE_PAUSEGAME
+        MENUITEM "&End Game\tCtrl+E",           MNU_FILE_ENDGAME
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tCtrl+Q",               MNU_FILE_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Settings\tCtrl+S",           MNU_HELP_SETTINGS
+        MENUITEM "Schmitztech.com\t!",          MNU_HELP_SCHMITZTECH
+        MENUITEM SEPARATOR
+        MENUITEM "&About\tCtrl+A",              MNU_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDA_MAIN ACCELERATORS DISCARDABLE 
+BEGIN
+    "!",            MNU_HELP_SCHMITZTECH,   ASCII,  NOINVERT
+    "A",            MNU_HELP_ABOUT,         VIRTKEY, CONTROL, NOINVERT
+    "E",            MNU_FILE_ENDGAME,       VIRTKEY, CONTROL, NOINVERT
+    "I",            MNU_HELP_INFO,          VIRTKEY, CONTROL, NOINVERT
+    "N",            MNU_FILE_NEWGAME,       VIRTKEY, CONTROL, NOINVERT
+    "P",            MNU_FILE_PAUSEGAME,     VIRTKEY, CONTROL, NOINVERT
+    "Q",            MNU_FILE_EXIT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            MNU_HELP_SETTINGS,      VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETTINGS DIALOG DISCARDABLE  0, 0, 134, 188
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDC_OK,77,167,50,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,27,167,50,14
+    EDITTEXT        IDE_UP,49,14,35,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_LEFT,13,34,35,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_RIGHT,85,33,35,12,ES_AUTOHSCROLL
+    EDITTEXT        IDE_DOWN,49,56,35,12,ES_AUTOHSCROLL
+    GROUPBOX        "Keys",IDF_KEYS,7,7,120,72
+    CTEXT           "Left",IDL_LEFT,13,47,18,8
+    CTEXT           "Up",IDL_UP,57,27,19,8
+    CTEXT           "Down",IDL_DOWN,55,68,26,8
+    CTEXT           "Right",IDL_RIGHT,93,46,20,8
+    GROUPBOX        "Game Speed",IDF_SPEED,7,82,120,23
+    SCROLLBAR       IDS_GAME_DELAY,9,92,115,8
+    GROUPBOX        "Initial Length",IDF_INITLENGTH,7,107,120,23
+    SCROLLBAR       IDS_INIT_LENGTH,9,118,115,8
+    GROUPBOX        "Growth Interval",IDF_GROWTH,7,132,120,23
+    SCROLLBAR       IDS_INC_LENGTH,9,144,115,8
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 241, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Schnake"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDI_SNAKE,IDC_STATIC,11,11,20,20
+    LTEXT           "Schnake Beta 0.95",IDC_STATIC,38,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright© 2002 Michael Schmitz",IDC_STATIC,38,23,119,8
+    DEFPUSHBUTTON   "OK",IDOK,184,7,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 127
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SNAKE               ICON    DISCARDABLE     "Snake.ico"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,9,5,0
+ PRODUCTVERSION 0,9,5,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Compiled: 11 October 2002\0"
+            VALUE "CompanyName", "Michael Schmitz Technologies\0"
+            VALUE "FileDescription", "Schnake\0"
+            VALUE "FileVersion", "0, 9, 5, 0\0"
+            VALUE "InternalName", "\0"
+            VALUE "LegalCopyright", "Copyright © 2002 Michael Schmitz\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SCHNAKE.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Schnake\0"
+            VALUE "ProductVersion", "0.9.5\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
